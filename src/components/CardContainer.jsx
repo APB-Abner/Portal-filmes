@@ -1,8 +1,12 @@
-export default function CardContainer() {
-    return(
-        <>
-        <h1>Card Container</h1>
-        {/* Container para cards */}
-        </>
+import { Children } from "react";
+
+export default function CardContainer({titulo, children}) {
+    return (
+        <div>
+            <h1>{titulo}</h1>
+            <div className="flex">
+                {children}
+            </div>
+        </div>
     )
 }
