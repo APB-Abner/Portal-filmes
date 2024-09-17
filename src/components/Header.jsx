@@ -1,18 +1,18 @@
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 
 
 export default function Header(){
     return(
         <>
-            <header>
+            <header className="flex w-full h-14 bg-purple-800 justify-around text-white items-center">
                 <div>
-                    <h1>Portal Filmes</h1>
+                    <h1 className="font-bold text-lg">Portal Filmes</h1>
                 </div>
                 <nav>
-                    <ul>
-                        <li><Link to="/">Home</Link></li>
-                        <li><Link to="/">Filmes</Link></li>
-                        <li><Link to="">Gêneros</Link></li>
+                    <ul className="flex gap-40">
+                        <li><NavLink to="/">Home</NavLink></li>
+                        <li><NavLink to="/movie">Filmes</NavLink></li>
+                        <li><NavLink to="/genre">Gêneros</NavLink></li>
                     </ul>
                 </nav>
             </header>
